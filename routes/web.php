@@ -40,7 +40,6 @@ Route::get('/projects/{slug}', function ($slug) {
             ],
         ],
 
-
         'telufjb' => [
             'number' => '02',
             'title' => 'TeluFJB',
@@ -71,7 +70,6 @@ Route::get('/projects/{slug}', function ($slug) {
             ],
         ],
 
-
         'distanhorti' => [
             'number' => '03',
             'title' => 'Distanhorti Website',
@@ -101,9 +99,7 @@ Route::get('/projects/{slug}', function ($slug) {
                 'Program and service navigation',
             ],
         ],
-
     ];
-
 
     abort_unless(isset($projects[$slug]), 404);
 
