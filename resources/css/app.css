@@ -162,18 +162,19 @@
     .skill-card p {
         @apply mt-3 text-sm leading-6 text-white/40;
     }
+/* SCROLL REVEAL */
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
 
-    /* SCROLL REVEAL */
-    .reveal {
-        opacity: 0;
-        transform: translateY(28px);
-        transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 }
 
 @keyframes bounceSlow {
