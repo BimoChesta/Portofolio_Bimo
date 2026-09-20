@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
         rel="stylesheet"
     >
 </head>
+
 
 <body class="bg-[#080808] text-white antialiased">
 
@@ -26,16 +28,16 @@
         class="fixed top-0 left-0 right-0 z-50"
     >
 
-        <nav class="mx-auto max-w-7xl px-6 lg:px-10 py-5">
+        <nav class="max-w-7xl mx-auto px-5 lg:px-8 py-5">
 
             <div class="
                 flex items-center justify-between
-                rounded-2xl border border-white/10
-                bg-black/60 backdrop-blur-xl
                 px-5 py-3
+                rounded-2xl
+                border border-white/[0.08]
+                bg-[#080808]/75
+                backdrop-blur-xl
             ">
-
-                <!-- Logo -->
 
                 <a
                     href="#home"
@@ -45,50 +47,29 @@
                 </a>
 
 
-                <!-- Desktop Navigation -->
-
                 <div class="hidden md:flex items-center gap-8">
 
-                    <a href="#home"
-                       class="nav-link">
-                        Home
-                    </a>
-
-                    <a href="#about"
-                       class="nav-link">
-                        About
-                    </a>
-
-                    <a href="#projects"
-                       class="nav-link">
-                        Projects
-                    </a>
-
-                    <a href="#skills"
-                       class="nav-link">
-                        Skills
-                    </a>
-
-                    <a href="#contact"
-                       class="nav-link">
-                        Contact
-                    </a>
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#experience" class="nav-link">Experience</a>
 
                 </div>
 
-
-                <!-- Desktop Contact -->
 
                 <a
                     href="#contact"
                     class="
                         hidden md:inline-flex
-                        items-center gap-2
                         rounded-xl
-                        bg-white text-black
+                        bg-white
+                        text-black
                         px-4 py-2.5
-                        text-sm font-semibold
-                        transition duration-300
+                        text-sm
+                        font-semibold
+                        transition
                         hover:bg-neutral-200
                     "
                 >
@@ -96,12 +77,11 @@
                 </a>
 
 
-                <!-- Mobile Button -->
-
                 <button
                     @click="open = !open"
-                    class="md:hidden text-white"
+                    class="md:hidden"
                 >
+
                     <svg
                         x-show="!open"
                         xmlns="http://www.w3.org/2000/svg"
@@ -118,6 +98,7 @@
                         />
                     </svg>
 
+
                     <svg
                         x-show="open"
                         xmlns="http://www.w3.org/2000/svg"
@@ -133,45 +114,39 @@
                             d="M6 18 18 6M6 6l12 12"
                         />
                     </svg>
+
                 </button>
 
             </div>
 
 
-            <!-- Mobile Navigation -->
+            <!-- MOBILE -->
 
             <div
                 x-show="open"
                 x-transition
                 class="
-                    md:hidden mt-3
-                    rounded-2xl border border-white/10
-                    bg-[#101010]/95 backdrop-blur-xl
+                    md:hidden
+                    mt-3
                     p-5
+                    rounded-2xl
+                    border border-white/[0.08]
+                    bg-[#101010]
                 "
             >
 
                 <div class="flex flex-col gap-5">
 
-                    <a @click="open=false" href="#home">
-                        Home
-                    </a>
-
-                    <a @click="open=false" href="#about">
-                        About
-                    </a>
-
-                    <a @click="open=false" href="#projects">
-                        Projects
-                    </a>
-
-                    <a @click="open=false" href="#skills">
-                        Skills
-                    </a>
-
-                    <a @click="open=false" href="#contact">
-                        Contact
-                    </a>
+                    <a @click="open=false" href="#home">Home</a>
+                    <a @click="open=false" href="#about">About</a>
+                    <a @click="open=false" href="#projects">Projects</a>
+                    <a @click="open=false" href="#skills">Skills</a>
+                    <a @click="open=false" href="#contact">Contact</a>
+                    <a href="#experience"
+   @click="open = false"
+   class="block py-3 text-sm text-white/50">
+    Experience
+</a>
 
                 </div>
 
@@ -182,6 +157,7 @@
     </header>
 
 
+
     <!-- ================= HERO ================= -->
 
     <main>
@@ -189,8 +165,10 @@
         <section
             id="home"
             class="
-                relative min-h-screen
-                flex items-center
+                relative
+                min-h-screen
+                flex
+                items-center
                 overflow-hidden
             "
         >
@@ -201,33 +179,36 @@
 
                 <div class="
                     absolute
-                    top-[-300px]
                     left-1/2
+                    top-[-300px]
                     -translate-x-1/2
                     w-[700px]
                     h-[700px]
                     rounded-full
                     bg-white/[0.035]
-                    blur-3xl
+                    blur-[120px]
                 "></div>
+
 
                 <div class="
                     absolute
                     inset-0
                     bg-grid
-                    opacity-30
+                    opacity-40
                 "></div>
 
             </div>
 
 
             <div class="
-                relative z-10
+                relative
+                z-10
+                w-full
                 max-w-7xl
                 mx-auto
-                px-6 lg:px-10
-                pt-32 pb-20
-                w-full
+                px-5 lg:px-8
+                pt-32
+                pb-24
             ">
 
                 <div class="
@@ -237,29 +218,37 @@
                     items-center
                 ">
 
-                    <!-- Left -->
+
+                    <!-- HERO LEFT -->
 
                     <div>
 
                         <div class="
-                            inline-flex items-center gap-2
+                            inline-flex
+                            items-center
+                            gap-2
+                            px-3.5
+                            py-2
                             rounded-full
-                            border border-white/10
-                            bg-white/[0.03]
-                            px-4 py-2
+                            border
+                            border-white/[0.08]
+                            bg-white/[0.025]
                             text-xs
-                            text-white/60
+                            text-white/45
                             mb-8
                         ">
 
-                            <span class="
-                                w-2 h-2
-                                rounded-full
-                                bg-emerald-400
-                                animate-pulse
-                            "></span>
+                            <span
+                                class="
+                                    w-1.5
+                                    h-1.5
+                                    rounded-full
+                                    bg-emerald-400
+                                    animate-pulse
+                                "
+                            ></span>
 
-                            Available for opportunities
+                            Open to opportunities
 
                         </div>
 
@@ -267,55 +256,61 @@
                         <p class="
                             text-sm
                             uppercase
-                            tracking-[0.3em]
-                            text-white/40
-                            mb-5
+                            tracking-[0.35em]
+                            text-white/30
                         ">
                             Hello, I'm
                         </p>
 
 
                         <h1 class="
+                            mt-5
                             font-display
-                            text-5xl
-                            sm:text-6xl
-                            lg:text-8xl
+                            text-[clamp(4rem,9vw,8rem)]
+                            leading-[0.82]
+                            tracking-[-0.07em]
                             font-bold
-                            tracking-[-0.06em]
-                            leading-[0.9]
                         ">
 
                             Bimo
+
+                            <span class="text-white/20">
+                                .
+                            </span>
+
                             <br>
 
                             <span class="text-white/35">
-                                Chesta.
+                                Chesta
                             </span>
 
                         </h1>
 
 
-                        <div class="mt-8 max-w-2xl">
+                        <div class="mt-9">
 
                             <h2 class="
-                                text-xl
-                                sm:text-2xl
-                                font-medium
-                                text-white/80
+                                font-display
+                                text-2xl
+                                sm:text-3xl
+                                font-semibold
+                                text-white/90
                             ">
                                 Fullstack Developer
                             </h2>
 
+
                             <p class="
                                 mt-4
+                                max-w-xl
                                 text-base
                                 sm:text-lg
                                 leading-8
-                                text-white/45
+                                text-white/40
                             ">
-                                I build modern web and mobile applications,
-                                turning ideas into functional digital products
-                                from frontend to backend.
+                                I build modern web and mobile applications
+                                across the entire development stack —
+                                from user interfaces to backend systems.
                             </p>
 
                         </div>
@@ -324,9 +319,10 @@
                         <!-- CTA -->
 
                         <div class="
-                            flex flex-wrap
+                            flex
+                            flex-wrap
                             gap-4
-                            mt-10
+                            mt-9
                         ">
 
                             <a
@@ -334,18 +330,21 @@
                                 class="
                                     group
                                     inline-flex
-                                    items-center gap-3
+                                    items-center
+                                    gap-3
                                     rounded-xl
                                     bg-white
                                     text-black
-                                    px-6 py-3.5
+                                    px-6
+                                    py-3.5
+                                    text-sm
                                     font-semibold
                                     transition
                                     hover:bg-neutral-200
                                 "
                             >
 
-                                View Projects
+                                Explore My Work
 
                                 <span class="
                                     transition
@@ -362,31 +361,38 @@
                                 class="
                                     inline-flex
                                     items-center
-                                    gap-3
                                     rounded-xl
-                                    border border-white/10
-                                    bg-white/[0.03]
-                                    px-6 py-3.5
+                                    border
+                                    border-white/10
+                                    bg-white/[0.025]
+                                    px-6
+                                    py-3.5
+                                    text-sm
                                     font-semibold
-                                    text-white/80
+                                    text-white/70
                                     transition
-                                    hover:bg-white/[0.08]
+                                    hover:bg-white/[0.06]
+                                    hover:text-white
                                 "
                             >
-                                Let's Connect
+                                Get In Touch
                             </a>
 
                         </div>
 
 
-                        <!-- Tech -->
+                        <!-- STACK -->
 
                         <div class="
-                            flex flex-wrap
-                            gap-x-5 gap-y-3
                             mt-12
-                            text-sm
-                            text-white/30
+                            flex
+                            flex-wrap
+                            gap-x-6
+                            gap-y-3
+                            text-xs
+                            uppercase
+                            tracking-[0.12em]
+                            text-white/25
                         ">
 
                             <span>Laravel</span>
@@ -394,153 +400,192 @@
                             <span>JavaScript</span>
                             <span>Kotlin</span>
                             <span>MySQL</span>
-                            <span>Tailwind CSS</span>
 
                         </div>
 
                     </div>
 
 
-                    <!-- Right -->
+
+                    <!-- HERO RIGHT -->
 
                     <div class="relative hidden lg:block">
 
                         <div class="
                             relative
-                            aspect-square
-                            max-w-[520px]
-                            ml-auto
+                            mx-auto
+                            w-[420px]
+                            h-[520px]
                         ">
 
-                            <!-- Outer circle -->
-
-                            <div class="
-                                absolute inset-8
-                                rounded-full
-                                border border-white/10
-                            "></div>
-
-                            <div class="
-                                absolute inset-20
-                                rounded-full
-                                border border-white/5
-                            "></div>
-
-
-                            <!-- Code card -->
+                            <!-- FRAME -->
 
                             <div class="
                                 absolute
-                                top-1/2
-                                left-1/2
-                                -translate-x-1/2
-                                -translate-y-1/2
-                                w-[340px]
-                                rounded-3xl
-                                border border-white/10
+                                inset-0
+                                rounded-[2rem]
+                                border
+                                border-white/[0.08]
+                                rotate-3
+                            "></div>
+
+
+                            <!-- PROFILE -->
+
+                            <div class="
+                                absolute
+                                inset-4
+                                overflow-hidden
+                                rounded-[1.7rem]
+                                border
+                                border-white/10
+                                bg-[#111]
+                            ">
+
+                                <img
+                                    src="/images/profile.jpg"
+                                    alt="Bimo Chesta Adabi"
+                                    class="
+                                        w-full
+                                        h-full
+                                        object-cover
+                                        grayscale
+                                        opacity-80
+                                    "
+                                    onerror="this.style.display='none'"
+                                >
+
+
+                                <!-- fallback -->
+
+                                <div class="
+                                    absolute
+                                    inset-0
+                                    flex
+                                    items-center
+                                    justify-center
+                                    bg-gradient-to-br
+                                    from-white/[0.07]
+                                    to-transparent
+                                ">
+
+                                    <span class="
+                                        font-display
+                                        text-8xl
+                                        font-bold
+                                        text-white/[0.06]
+                                    ">
+                                        BC
+                                    </span>
+
+                                </div>
+
+
+                                <!-- Overlay -->
+
+                                <div class="
+                                    absolute
+                                    inset-0
+                                    bg-gradient-to-t
+                                    from-black
+                                    via-transparent
+                                    to-transparent
+                                "></div>
+
+
+                                <div class="
+                                    absolute
+                                    bottom-7
+                                    left-7
+                                    right-7
+                                ">
+
+                                    <p class="
+                                        text-xs
+                                        uppercase
+                                        tracking-[0.25em]
+                                        text-white/30
+                                    ">
+                                        Fullstack Developer
+                                    </p>
+
+                                    <p class="
+                                        mt-2
+                                        font-display
+                                        text-2xl
+                                        font-semibold
+                                    ">
+                                        Web × Mobile
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- FLOATING CARD -->
+
+                            <div class="
+                                absolute
+                                -right-10
+                                top-16
+                                rounded-2xl
+                                border
+                                border-white/10
                                 bg-[#111]/90
                                 backdrop-blur-xl
-                                shadow-2xl
-                                p-6
+                                px-5
+                                py-4
                             ">
 
-                                <div class="
-                                    flex items-center gap-2
-                                    mb-6
-                                ">
-
-                                    <span class="w-3 h-3 rounded-full bg-white/20"></span>
-                                    <span class="w-3 h-3 rounded-full bg-white/20"></span>
-                                    <span class="w-3 h-3 rounded-full bg-white/20"></span>
-
-                                </div>
-
-
-                                <div class="
+                                <p class="
                                     font-mono
-                                    text-sm
-                                    leading-8
-                                    text-white/50
+                                    text-[10px]
+                                    text-white/25
                                 ">
+                                    CURRENT FOCUS
+                                </p>
 
-                                    <div>
-                                        <span class="text-white/30">01</span>
-                                        <span class="text-purple-300">
-                                            class
-                                        </span>
-                                        <span class="text-white">
-                                            Developer
-                                        </span>
-                                    </div>
+                                <p class="
+                                    mt-1
+                                    text-sm
+                                    font-medium
+                                ">
+                                    Fullstack Development
+                                </p>
 
-                                    <div>
-                                        <span class="text-white/30">02</span>
-                                        {
-                                    </div>
-
-                                    <div>
-                                        <span class="text-white/30">03</span>
-                                        &nbsp;&nbsp;name:
-                                        <span class="text-emerald-300">
-                                            "Bimo"
-                                        </span>
-                                    </div>
-
-                                    <div>
-                                        <span class="text-white/30">04</span>
-                                        &nbsp;&nbsp;role:
-                                        <span class="text-emerald-300">
-                                            "Fullstack"
-                                        </span>
-                                    </div>
-
-                                    <div>
-                                        <span class="text-white/30">05</span>
-                                        &nbsp;&nbsp;build:
-                                        <span class="text-emerald-300">
-                                            "Web & Mobile"
-                                        </span>
-                                    </div>
-
-                                    <div>
-                                        <span class="text-white/30">06</span>
-                                        }
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- Floating tags -->
-
-                            <div class="
-                                absolute
-                                top-10 right-0
-                                rounded-xl
-                                border border-white/10
-                                bg-white/[0.04]
-                                backdrop-blur-xl
-                                px-4 py-3
-                                text-sm
-                                text-white/70
-                            ">
-                                ⚡ Laravel
                             </div>
 
 
                             <div class="
                                 absolute
-                                bottom-16 left-0
-                                rounded-xl
-                                border border-white/10
-                                bg-white/[0.04]
+                                -left-10
+                                bottom-20
+                                rounded-2xl
+                                border
+                                border-white/10
+                                bg-[#111]/90
                                 backdrop-blur-xl
-                                px-4 py-3
-                                text-sm
-                                text-white/70
+                                px-5
+                                py-4
                             ">
-                                Kotlin / Android
+
+                                <p class="
+                                    font-mono
+                                    text-[10px]
+                                    text-white/25
+                                ">
+                                    STACK
+                                </p>
+
+                                <p class="
+                                    mt-1
+                                    text-sm
+                                    font-medium
+                                ">
+                                    Laravel · Kotlin
+                                </p>
+
                             </div>
 
                         </div>
@@ -552,48 +597,49 @@
             </div>
 
 
-            <!-- Scroll -->
-
             <div class="
                 absolute
                 bottom-8
                 left-1/2
                 -translate-x-1/2
+                font-mono
+                text-[10px]
+                tracking-[0.4em]
                 text-white/20
-                text-xs
-                tracking-[0.3em]
                 uppercase
             ">
-                Scroll
+                Scroll to explore
             </div>
 
         </section>
+
 
 
         <!-- ================= ABOUT ================= -->
 
         <section
             id="about"
-            class="py-32 border-t border-white/5"
+            class="border-t border-white/[0.06] py-32"
         >
 
-            <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
                 <div class="
                     grid
-                    lg:grid-cols-[.7fr_1.3fr]
+                    lg:grid-cols-[.65fr_1.35fr]
                     gap-16
                 ">
+
 
                     <div>
 
                         <span class="section-label">
-                            01 — About Me
+                            01 — About
                         </span>
 
                         <h2 class="section-title">
-                            More than just
-                            <span>code.</span>
+                            Building with
+                            <span>purpose.</span>
                         </h2>
 
                     </div>
@@ -602,29 +648,30 @@
                     <div>
 
                         <p class="
+                            font-display
                             text-2xl
                             sm:text-3xl
                             leading-relaxed
                             text-white/75
-                            font-medium
                         ">
-                            I'm a Fullstack Developer who enjoys building
-                            applications from the interface users see
-                            to the backend systems that power them.
+                            I enjoy turning ideas into working digital
+                            products — connecting thoughtful interfaces
+                            with reliable backend systems.
                         </p>
 
 
                         <p class="
                             mt-8
+                            max-w-2xl
                             text-white/40
                             leading-8
-                            max-w-2xl
                         ">
-                            I have a background in Application Software
-                            Engineering and experience working with web,
-                            mobile, UI/UX, and backend development.
-                            My focus is creating products that are
-                            functional, maintainable, and enjoyable to use.
+                            I'm an Application Software Engineering graduate
+                            with experience across web development, mobile
+                            development, and UI/UX. My current focus is
+                            growing as a Fullstack Developer and building
+                            products that are practical, maintainable,
+                            and useful.
                         </p>
 
 
@@ -636,18 +683,41 @@
                         ">
 
                             <div class="stat-card">
-                                <strong>Web</strong>
-                                <span>Development</span>
+
+                                <p class="stat-number">
+                                    WEB
+                                </p>
+
+                                <p class="stat-description">
+                                    Fullstack Development
+                                </p>
+
                             </div>
 
-                            <div class="stat-card">
-                                <strong>Mobile</strong>
-                                <span>Development</span>
-                            </div>
 
                             <div class="stat-card">
-                                <strong>UI/UX</strong>
-                                <span>Design</span>
+
+                                <p class="stat-number">
+                                    MOBILE
+                                </p>
+
+                                <p class="stat-description">
+                                    Android Development
+                                </p>
+
+                            </div>
+
+
+                            <div class="stat-card">
+
+                                <p class="stat-number">
+                                    UI/UX
+                                </p>
+
+                                <p class="stat-description">
+                                    Product Design
+                                </p>
+
                             </div>
 
                         </div>
@@ -661,19 +731,26 @@
         </section>
 
 
+
         <!-- ================= PROJECTS ================= -->
 
         <section
             id="projects"
-            class="py-32 border-t border-white/5"
+            class="
+                border-t
+                border-white/[0.06]
+                py-32
+            "
         >
 
-            <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
 
                 <div class="
-                    flex flex-col
-                    md:flex-row
-                    md:items-end
+                    flex
+                    flex-col
+                    lg:flex-row
+                    lg:items-end
                     justify-between
                     gap-8
                     mb-16
@@ -692,44 +769,67 @@
 
                     </div>
 
+
                     <p class="
                         max-w-md
-                        text-white/40
+                        text-sm
                         leading-7
+                        text-white/35
                     ">
-                        A collection of projects I've worked on across
-                        web development, mobile applications, and
-                        digital products.
+                        A selection of projects covering web,
+                        mobile, backend systems, and digital
+                        product design.
                     </p>
 
                 </div>
 
 
-                <!-- Project 1 -->
+
+                <!-- BLOODCONNECT -->
 
                 <article class="
-                    project-card
+                    project-feature
                     group
-                    mb-8
                 ">
 
-                    <div class="project-image">
+                    <div class="project-visual">
 
-                        <div class="project-placeholder">
-                            <span>01</span>
-                            <strong>BloodConnect</strong>
+                        <img
+                            src="/images/projects/bloodconnect.png"
+                            alt="BloodConnect"
+                            class="project-image"
+                            onerror="this.style.display='none'"
+                        >
+
+                        <div class="project-overlay"></div>
+
+
+                        <div class="project-fallback">
+
+                            <span>
+                                01
+                            </span>
+
+                            <strong>
+                                BloodConnect
+                            </strong>
+
+                            <p>
+                                Blood Donor Information System
+                            </p>
+
                         </div>
 
                     </div>
 
 
-                    <div class="p-7 lg:p-10">
+                    <div class="p-8 lg:p-10">
 
                         <div class="
-                            flex flex-wrap
-                            items-center
-                            gap-3
-                            mb-5
+                            flex
+                            flex-wrap
+                            gap-2
+                            mb-6
                         ">
 
                             <span class="tag">
@@ -744,37 +844,53 @@
                                 MySQL
                             </span>
 
+                            <span class="tag">
+                                Tailwind
+                            </span>
+
                         </div>
 
 
-                        <h3 class="
-                            font-display
-                            text-3xl
-                            font-semibold
+                        <div class="
+                            flex
+                            flex-col
+                            lg:flex-row
+                            lg:items-end
+                            justify-between
+                            gap-8
                         ">
-                            BloodConnect
-                        </h3>
+
+                            <div>
+
+                                <h3 class="
+                                    font-display
+                                    text-3xl
+                                    font-semibold
+                                ">
+                                    BloodConnect
+                                </h3>
 
 
-                        <p class="
-                            mt-4
-                            max-w-2xl
-                            text-white/40
-                            leading-7
-                        ">
-                            A web-based blood donor information system
-                            designed to help manage donor data and
-                            provide blood availability information.
-                        </p>
+                                <p class="
+                                    mt-4
+                                    max-w-2xl
+                                    text-white/40
+                                    leading-7
+                                ">
+                                    A web-based blood donor information
+                                    system designed to manage donor data
+                                    and provide blood availability
+                                    information for recipients.
+                                </p>
+
+                            </div>
 
 
-                        <div class="mt-7">
-
-                            <a
-                                href="#"
+                                                        <a
+                                href="/projects/bloodconnect"
                                 class="project-link"
                             >
-                                View Project →
+                                View Case Study →
                             </a>
 
                         </div>
@@ -784,24 +900,45 @@
                 </article>
 
 
-                <!-- Projects Grid -->
+
+                <!-- TWO PROJECTS -->
 
                 <div class="
                     grid
                     md:grid-cols-2
                     gap-8
+                    mt-8
                 ">
+
+
+                    <!-- TELUFJB -->
 
                     <article class="project-card group">
 
-                        <div class="project-image">
+                        <div class="project-visual-small">
 
-                            <div class="project-placeholder">
+                            <img
+                                src="/images/projects/telufjb.png"
+                                alt="TeluFJB"
+                                class="project-image"
+                                onerror="this.style.display='none'"
+                            >
+
+                            <div class="project-overlay"></div>
+
+
+                            <div class="project-fallback">
+
                                 <span>02</span>
-                                <strong>TeluFJB</strong>
+
+                                <strong>
+                                    TeluFJB
+                                </strong>
+
                             </div>
 
                         </div>
+
 
                         <div class="p-7">
 
@@ -817,34 +954,67 @@
 
                             </div>
 
-                            <h3 class="text-2xl font-semibold">
+
+                            <h3 class="
+                                font-display
+                                text-2xl
+                                font-semibold
+                            ">
                                 TeluFJB
                             </h3>
 
+
                             <p class="
                                 mt-3
-                                text-white/40
+                                text-sm
                                 leading-7
+                                text-white/35
                             ">
-                                Android marketplace platform for
-                                Telkom University students.
+                                Android marketplace platform
+                                designed for Telkom University
+                                students.
                             </p>
+
+
+                            <a
+                                href="/projects/telufjb"
+                                class="project-link inline-block mt-6"
+                            >
+                                View Case Study →
+                            </a>
 
                         </div>
 
                     </article>
 
+                    <!-- DISTANHORTI -->
 
                     <article class="project-card group">
 
-                        <div class="project-image">
+                        <div class="project-visual-small">
 
-                            <div class="project-placeholder">
+                            <img
+                                src="/images/projects/distanhorti.png"
+                                alt="Distanhorti"
+                                class="project-image"
+                                onerror="this.style.display='none'"
+                            >
+
+                            <div class="project-overlay"></div>
+
+
+                            <div class="project-fallback">
+
                                 <span>03</span>
-                                <strong>Distanhorti</strong>
+
+                                <strong>
+                                    Distanhorti
+                                </strong>
+
                             </div>
 
                         </div>
+
 
                         <div class="p-7">
 
@@ -858,20 +1028,40 @@
                                     Tailwind
                                 </span>
 
+                                <span class="tag">
+                                    UI/UX
+                                </span>
+
                             </div>
 
-                            <h3 class="text-2xl font-semibold">
+
+                            <h3 class="
+                                font-display
+                                text-2xl
+                                font-semibold
+                            ">
                                 Distanhorti Website
                             </h3>
 
+
                             <p class="
                                 mt-3
-                                text-white/40
+                                text-sm
                                 leading-7
+                                text-white/35
                             ">
-                                Modern website redesign focused on
-                                information architecture and user experience.
+                                Website redesign focused on
+                                information architecture and
+                                user experience.
                             </p>
+
+
+                            <a
+                                href="/projects/distanhorti"
+                                class="project-link inline-block mt-6"
+                            >
+                                View Case Study →
+                            </a>
 
                         </div>
 
@@ -884,20 +1074,26 @@
         </section>
 
 
+
         <!-- ================= SKILLS ================= -->
 
         <section
             id="skills"
-            class="py-32 border-t border-white/5"
+            class="
+                border-t
+                border-white/[0.06]
+                py-32
+            "
         >
 
-            <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
                 <div class="
                     grid
-                    lg:grid-cols-[.7fr_1.3fr]
+                    lg:grid-cols-[.65fr_1.35fr]
                     gap-16
                 ">
+
 
                     <div>
 
@@ -907,7 +1103,7 @@
 
                         <h2 class="section-title">
                             My technical
-                            <span>toolbox.</span>
+                            <span>stack.</span>
                         </h2>
 
                     </div>
@@ -918,6 +1114,7 @@
                         sm:grid-cols-2
                         gap-4
                     ">
+
 
                         <div class="skill-card">
 
@@ -990,41 +1187,229 @@
 
         </section>
 
+{{-- EXPERIENCE --}}
+<section id="experience" class="relative border-t border-white/[0.06] py-28 sm:py-36">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+        <div class="max-w-3xl">
+            <p class="section-label">04 — Experience</p>
+
+            <h2 class="section-title">
+                Experience that <span>builds real skills.</span>
+            </h2>
+        </div>
+
+        <div class="mt-16 space-y-4">
+
+            {{-- EXPERIENCE 01 --}}
+            <div class="group rounded-3xl border border-white/[0.08] bg-white/[0.02] p-6 sm:p-8 transition duration-500 hover:-translate-y-1 hover:border-white/[0.15]">
+                <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <span class="font-mono text-[10px] text-white/20">01</span>
+                            <span class="text-xs uppercase tracking-[0.2em] text-white/25">
+                                Experience
+                            </span>
+                        </div>
+
+                        <h3 class="mt-6 font-display text-2xl font-semibold">
+                            Fullstack Engineer
+                        </h3>
+
+                        <p class="mt-2 text-sm text-white/35">
+                            Independent Internship
+                        </p>
+                    </div>
+
+                    <span class="font-mono text-xs text-white/25">
+                        2026
+                    </span>
+                </div>
+
+                <p class="mt-8 max-w-3xl text-sm leading-7 text-white/35">
+                    Developed web-based applications by working across frontend and backend
+                    development. Worked with Laravel, PHP, MySQL, JavaScript, Tailwind CSS,
+                    REST API, database integration, and Git.
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="tag">Laravel</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Tailwind CSS</span>
+                    <span class="tag">Git</span>
+                </div>
+            </div>
+
+            {{-- EXPERIENCE 02 --}}
+            <div class="group rounded-3xl border border-white/[0.08] bg-white/[0.02] p-6 sm:p-8 transition duration-500 hover:-translate-y-1 hover:border-white/[0.15]">
+                <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <span class="font-mono text-[10px] text-white/20">02</span>
+                            <span class="text-xs uppercase tracking-[0.2em] text-white/25">
+                                Experience
+                            </span>
+                        </div>
+
+                        <h3 class="mt-6 font-display text-2xl font-semibold">
+                            Web Programming Assistant
+                        </h3>
+
+                        <p class="mt-2 text-sm text-white/35">
+                            Telkom University
+                        </p>
+                    </div>
+
+                    <span class="font-mono text-xs text-white/25">
+                        2025 — 2026
+                    </span>
+                </div>
+
+                <p class="mt-8 max-w-3xl text-sm leading-7 text-white/35">
+                    Assisted students during web programming practical sessions,
+                    explained programming concepts, helped troubleshoot implementation
+                    issues, and supported project development.
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">Web Development</span>
+                </div>
+            </div>
+
+            {{-- EXPERIENCE 03 --}}
+            <div class="group rounded-3xl border border-white/[0.08] bg-white/[0.02] p-6 sm:p-8 transition duration-500 hover:-translate-y-1 hover:border-white/[0.15]">
+                <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <span class="font-mono text-[10px] text-white/20">03</span>
+                            <span class="text-xs uppercase tracking-[0.2em] text-white/25">
+                                Experience
+                            </span>
+                        </div>
+
+                        <h3 class="mt-6 font-display text-2xl font-semibold">
+                            UI/UX Designer
+                        </h3>
+
+                        <p class="mt-2 text-sm text-white/35">
+                            Chevalier Lab — Telkom University
+                        </p>
+                    </div>
+
+                    <span class="font-mono text-xs text-white/25">
+                        2024 — 2025
+                    </span>
+                </div>
+
+                <p class="mt-8 max-w-3xl text-sm leading-7 text-white/35">
+                    Worked on interface and user experience projects involving user research,
+                    wireframing, prototyping, usability testing, and interface design using Figma.
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="tag">Figma</span>
+                    <span class="tag">User Research</span>
+                    <span class="tag">Wireframing</span>
+                    <span class="tag">Prototyping</span>
+                    <span class="tag">Usability Testing</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+{{-- EDUCATION --}}
+<section id="education" class="relative border-t border-white/[0.06] py-28 sm:py-36">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+        <div class="max-w-3xl">
+            <p class="section-label">05 — Education</p>
+
+            <h2 class="section-title">
+                Where I <span>started building.</span>
+            </h2>
+        </div>
+
+        <div class="mt-16 rounded-3xl border border-white/[0.08] bg-white/[0.02] p-7 sm:p-10">
+
+            <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+
+                <div>
+                    <p class="font-mono text-[10px] uppercase tracking-[0.25em] text-white/20">
+                        Diploma
+                    </p>
+
+                    <h3 class="mt-5 font-display text-2xl sm:text-3xl font-semibold">
+                        Rekayasa Perangkat Lunak Aplikasi
+                    </h3>
+
+                    <p class="mt-3 text-white/40">
+                        Telkom University
+                    </p>
+                </div>
+
+                <span class="font-mono text-xs text-white/25">
+                    D3
+                </span>
+
+            </div>
+
+            <div class="mt-8 border-t border-white/[0.06] pt-8">
+                <p class="max-w-3xl text-sm leading-7 text-white/35">
+                    Focused on software development, web development, mobile application
+                    development, databases, software engineering, and user interface design.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
 
         <!-- ================= CONTACT ================= -->
 
         <section
             id="contact"
             class="
-                py-32
                 border-t
-                border-white/5
+                border-white/[0.06]
+                py-36
             "
         >
 
             <div class="
-                max-w-5xl
+                max-w-4xl
                 mx-auto
-                px-6
+                px-5
                 text-center
             ">
 
                 <span class="section-label">
-                    04 — Contact
+                    06 — Contact
                 </span>
 
 
                 <h2 class="
+                    mt-6
                     font-display
                     text-5xl
                     sm:text-7xl
                     font-bold
-                    tracking-[-0.05em]
-                    mt-6
+                    tracking-[-0.06em]
                 ">
 
                     Let's build
-                    <span class="text-white/30">
+                    <span class="text-white/25">
                         something.
                     </span>
 
@@ -1032,14 +1417,14 @@
 
 
                 <p class="
-                    mt-8
                     max-w-xl
                     mx-auto
-                    text-white/40
+                    mt-7
+                    text-white/35
                     leading-7
                 ">
-                    I'm always open to discussing new opportunities,
-                    interesting projects, or collaborations.
+                    Have a project, opportunity, or idea?
+                    Feel free to reach out.
                 </p>
 
 
@@ -1047,19 +1432,18 @@
                     href="mailto:your@email.com"
                     class="
                         inline-flex
-                        items-center
-                        gap-3
-                        mt-10
+                        mt-9
                         rounded-xl
                         bg-white
                         text-black
-                        px-7 py-4
+                        px-7
+                        py-4
                         font-semibold
                         transition
                         hover:bg-neutral-200
                     "
                 >
-                    Get in touch →
+                    Start a conversation →
                 </a>
 
 
@@ -1069,19 +1453,26 @@
                     gap-8
                     mt-12
                     text-sm
-                    text-white/40
+                    text-white/35
                 ">
 
-                    <a href="#" class="hover:text-white transition">
-                        GitHub
+                    <a href="https://github.com/BimoChesta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="rounded-full border border-white/[0.08] bg-white/[0.02] px-5 py-3 text-sm text-white/50 transition hover:border-white/[0.18] hover:text-white">
+                        GitHub ↗
                     </a>
 
-                    <a href="#" class="hover:text-white transition">
-                        LinkedIn
+                    <a href="https://www.linkedin.com/in/YOUR_USERNAME/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="rounded-full border border-white/[0.08] bg-white/[0.02] px-5 py-3 text-sm text-white/50 transition hover:border-white/[0.18] hover:text-white">
+                        LinkedIn ↗
                     </a>
 
-                    <a href="#" class="hover:text-white transition">
-                        Instagram
+                    <a href="mailto:YOUR_EMAIL@gmail.com"
+                    class="rounded-full border border-white/[0.08] bg-white/[0.02] px-5 py-3 text-sm text-white/50 transition hover:border-white/[0.18] hover:text-white">
+                        Email ↗
                     </a>
 
                 </div>
@@ -1093,39 +1484,36 @@
     </main>
 
 
+
     <!-- ================= FOOTER ================= -->
 
-    <footer class="
-        border-t
-        border-white/5
-        py-8
-    ">
+    <footer class="border-t border-white/[0.06]">
 
         <div class="
             max-w-7xl
             mx-auto
-            px-6 lg:px-10
+            px-5 lg:px-8
+            py-8
             flex
             flex-col
             sm:flex-row
             justify-between
             gap-4
-            text-sm
-            text-white/30
+            text-xs
+            text-white/25
         ">
 
             <p>
-                © {{ date('Y') }} Bimo Chesta Adabi.
+                © {{ date('Y') }} Bimo Chesta Adabi
             </p>
 
             <p>
-                Designed & Built with Laravel.
+                Designed & built with Laravel.
             </p>
 
         </div>
 
     </footer>
-
 
 </body>
 </html>
