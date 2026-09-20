@@ -1463,14 +1463,14 @@
                         GitHub ↗
                     </a>
 
-                    <a href="https://www.linkedin.com/in/YOUR_USERNAME/"
+                    <a href="https://www.linkedin.com/in/Bimo_Chesta_Adabi/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="rounded-full border border-white/[0.08] bg-white/[0.02] px-5 py-3 text-sm text-white/50 transition hover:border-white/[0.18] hover:text-white">
                         LinkedIn ↗
                     </a>
 
-                    <a href="mailto:YOUR_EMAIL@gmail.com"
+                    <a href="mailto:bimo74755@gmail.com"
                     class="rounded-full border border-white/[0.08] bg-white/[0.02] px-5 py-3 text-sm text-white/50 transition hover:border-white/[0.18] hover:text-white">
                         Email ↗
                     </a>
